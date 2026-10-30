@@ -1,7 +1,7 @@
 # Web Technologies - Lab Mid Term (FA26 BCS A)
 
-**Name:** Your Name
-**Roll No.:** FA26-BCS-074
+Name: farwa hussain pari
+Roll No: FA26-BCS-031
 
 ## My personal numbers
 
