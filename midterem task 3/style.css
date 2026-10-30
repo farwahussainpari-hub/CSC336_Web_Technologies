@@ -1,0 +1,423 @@
+/* ShopEasy shared styles. Bootstrap handles the responsive grid and navbar. */
+
+:root {
+    --shop-maroon: #4d001b;
+    --shop-blue: #1f4e79;
+    --page-background: #f4f6f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--page-background);
+    color: #292929;
+}
+
+/* Navbar */
+.shop-navbar {
+    background-color: var(--shop-maroon);
+    padding: 12px 0;
+}
+
+.shop-logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.shop-navbar .nav-link {
+    color: white;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+}
+
+.shop-navbar .nav-link:hover,
+.shop-navbar .nav-link.active {
+    color: #ffd6e2;
+}
+
+.cart-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.cart-link:hover {
+    color: #ffd6e2;
+}
+
+.cart-label {
+    font-size: 15px;
+}
+
+/* Homepage hero */
+.hero {
+    padding: 48px 0 38px;
+}
+
+.hero h1 {
+    color: var(--shop-blue);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.section-heading {
+    margin: 10px 0 24px;
+}
+
+.section-heading h2 {
+    color: var(--shop-blue);
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.section-heading p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Product cards */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.10);
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+}
+
+.product-image-link {
+    display: block;
+    background: #fff;
+    padding: 12px 12px 0;
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.product-info {
+    padding: 16px;
+}
+
+.product-info h3 {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.product-info h3 a {
+    color: #292929;
+    text-decoration: none;
+}
+
+.product-info h3 a:hover {
+    color: var(--shop-blue);
+}
+
+.product-description {
+    min-height: 42px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: var(--shop-blue);
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.shop-button {
+    background-color: var(--shop-maroon);
+    color: white;
+    border: 1px solid var(--shop-maroon);
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.shop-button:hover,
+.shop-button:focus {
+    background-color: #690027;
+    border-color: #690027;
+    color: white;
+}
+
+/* Product details page */
+.product-detail-section {
+    padding-top: 28px;
+    padding-bottom: 55px;
+}
+
+.product-detail {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.detail-image {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.small-label {
+    color: var(--shop-blue);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.detail-title {
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detail-price {
+    color: var(--shop-blue);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.detail-description {
+    line-height: 1.7;
+    color: #555;
+}
+
+.product-features {
+    padding-left: 20px;
+    line-height: 1.9;
+}
+
+.quantity-area {
+    margin: 22px 0 16px;
+}
+
+.quantity-input {
+    max-width: 110px;
+}
+
+.detail-cart-button {
+    min-width: 180px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--shop-blue);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Shared footer */
+.shop-footer {
+    background-color: var(--shop-maroon);
+    color: white;
+    padding: 22px 0;
+    margin-top: 20px;
+}
+
+/* Small-screen adjustments; Bootstrap handles the main grid breakpoints. */
+@media (max-width: 575.98px) {
+    .hero {
+        padding: 34px 0 25px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .product-detail {
+        padding: 14px;
+    }
+
+    .cart-label {
+        display: none;
+    }
+}
+
+
+/* ===== TASK 1 START: CSS-only category filter ===== */
+/* Accent colour H = 158: hsl(158, 70%, 45%) */
+:root {
+    --accent: hsl(158, 70%, 45%);
+}
+
+/* the real radio buttons are hidden; the labels are the visible buttons */
+.filter-wrap {
+    position: relative;
+}
+
+.filter-wrap input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.filter-wrap label {
+    display: inline-block;
+    padding: 7px 18px;
+    margin: 0 8px 18px 0;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    color: #292929;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* the selected filter looks selected (uses the accent colour) */
+.filter-wrap input[type="radio"]:checked + label {
+    background: var(--accent);
+    color: white;
+}
+
+/* keyboard focus outline */
+.filter-wrap input[type="radio"]:focus-visible + label {
+    outline: 3px solid #292929;
+    outline-offset: 2px;
+}
+
+/* When a category radio is checked, hide every card whose data-category is different.
+   display:none removes the card from the layout, so there are no empty gaps. */
+#cat-electronics:checked ~ .row .product-item:not([data-category="electronics"]) { display: none; }
+#cat-footwear:checked ~ .row .product-item:not([data-category="footwear"]) { display: none; }
+#cat-bags:checked ~ .row .product-item:not([data-category="bags"]) { display: none; }
+#cat-stationery:checked ~ .row .product-item:not([data-category="stationery"]) { display: none; }
+#cat-home:checked ~ .row .product-item:not([data-category="home"]) { display: none; }
+/* ===== TASK 1 END ===== */
+
+
+/* ===== TASK 2 START: product page with CSS Grid (named areas) ===== */
+/* Below 674px: one column, stacked in this order: image, details, description */
+.product-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "image"
+        "details"
+        "description";
+    gap: 24px;
+}
+
+.product-image-box { grid-area: image; }
+.product-details-box { grid-area: details; }
+.product-description-box { grid-area: description; }
+
+.product-details-box {
+    background: #f8f9fa;
+    border: 1px solid #dde2e7;
+    border-top: 4px solid hsl(158, 70%, 45%);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.description-heading {
+    color: var(--shop-blue);
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.description-subheading {
+    color: var(--shop-blue);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 22px 0 8px;
+}
+
+/* From 674px and wider: image + details side by side, description full width underneath */
+@media (min-width: 674px) {
+    .product-layout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "image       details"
+            "description description";
+        gap: 32px;
+    }
+
+    /* tall image row: gives the sticky box room to move while you scroll */
+    .product-image-box .detail-image {
+        height: 640px;
+        max-height: none;
+    }
+
+    /* sticky details box: stays 104px from the top of the screen  (74 mod 40 + 70 = 104) */
+    .product-details-box {
+        position: sticky;
+        top: 104px;
+        align-self: start;   /* box keeps its own height, so it can move inside the row */
+    }
+}
+/* ===== TASK 2 END ===== */
+
+/* ===== TASK 3 START: search box, sort button, Premium label ===== */
+.shop-toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.shop-toolbar #search-box {
+    flex: 1;
+}
+
+.shop-toolbar #sort-btn {
+    white-space: nowrap;
+}
+
+/* class added by script.js to cards that do not match the search text */
+.search-hidden {
+    display: none !important;
+}
+
+#no-results {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    padding: 40px 0;
+}
+
+/* "Premium" label added by script.js */
+.product-card {
+    position: relative;
+}
+
+.premium-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: hsl(158, 70%, 45%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+/* ===== TASK 3 END ===== */
