@@ -1,4 +1,4 @@
-# Web Technologies - Lab Mid Term (FA26 BCS A)
+# Web Technologies - Lab Mid Term 
 
 Name: farwa hussain pari
 Roll No: FA26-BCS-031
