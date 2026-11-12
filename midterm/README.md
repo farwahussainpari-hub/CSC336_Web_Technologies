@@ -3,16 +3,6 @@
 Name: farwa hussain pari
 Roll No: FA26-BCS-031
 
-## My personal numbers
-
-| Value | Formula | Result |
-|-------|---------|--------|
-| N | last two digits of roll number | **74** |
-| BP | 600 + N | **674px** |
-| H (accent hue) | (N x 7) mod 360 | **158** -> `hsl(158, 70%, 45%)` |
-| K (categories) | (N mod 3) + 3 | **5** |
-| Sticky offset | (N mod 40) + 70 | **104px** |
-| Premium limit | N x 100 | **Rs. 7,400** |
 
 ## Files I changed
 
